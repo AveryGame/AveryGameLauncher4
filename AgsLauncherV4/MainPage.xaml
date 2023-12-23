@@ -91,7 +91,7 @@ OffsetY="5"/>-->
         </Border>
         <Image x:Name="image1" HorizontalAlignment="Left" Height="109" Margin="724,392,0,0" VerticalAlignment="Top" Width="280" Source="/Assets/Wide1000x380Logo.png" Stretch="UniformToFill"/>
         <Ellipse HorizontalAlignment="Left" Height="32" Margin="40,18,0,0" Stroke="#32004c" VerticalAlignment="Top" Width="32" Fill="#32004c"/>
-        <PersonPicture HorizontalAlignment="Left" Height="26" Margin="43,21,0,0" VerticalAlignment="Top" Width="26"/>
+        <PersonPicture Name="ProfilePicture" HorizontalAlignment="Left" Height="26" Margin="43,21,0,0" VerticalAlignment="Top" Width="26"/>
         <Image x:Name="image2" HorizontalAlignment="Left" Height="28" Margin="86,21,0,0" VerticalAlignment="Top" Width="28" Source="/Assets/Square32x32.Dark.png"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="48" Margin="173,422,0,0" TextWrapping="Wrap" Opacity="0.87" Text="INSTALLING" VerticalAlignment="Top" FontSize="26" Width="88" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight"/>
         <ProgressBar Value="83" HorizontalAlignment="Left" Height="10" Margin="173,456,0,0" VerticalAlignment="Top" Width="87" Foreground="#FF330042"/>

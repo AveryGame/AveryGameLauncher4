@@ -49,6 +49,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AveryGameApi\Account.cs" />
+    <Compile Include="AveryGameApi\AccountData.cs" />
+    <Compile Include="AveryGameApi\Data.cs" />
+    <Compile Include="AveryGameApi\Friend.cs" />
+    <Compile Include="AveryGameApi\Game.cs" />
+    <Compile Include="AveryGameApi\Main.cs" />
+    <Compile Include="AveryGameApi\ResponseTypes\FriendData.cs" />
+    <Compile Include="AveryGameApi\ResponseTypes\UserData.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -91,8 +99,10 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Assets\YanoneKaffeesatz-VariableFont_wght.ttf" />
   </ItemGroup>
