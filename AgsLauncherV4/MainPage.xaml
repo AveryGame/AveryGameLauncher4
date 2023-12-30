@@ -23,23 +23,21 @@
     Opacity="1" 
             Background="Black">
         </Border>
-        <Border Name="LaunchBorder" CornerRadius="8" BorderThickness="1" HorizontalAlignment="Left" Height="60" Margin="40,415,0,0" VerticalAlignment="Top" Width="265" FocusVisualPrimaryBrush="{x:Null}" RequestedTheme="Dark">
+        <Border Name="LaunchBorder" CornerRadius="8" BorderThickness="1" HorizontalAlignment="Left" Margin="40,0,0,25" Width="265" FocusVisualPrimaryBrush="{x:Null}" RequestedTheme="Dark" Height="60" VerticalAlignment="Bottom">
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.5" Opacity="0.5" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>
             <Border BorderBrush="#FF330042" Background="#32004c" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="48" VerticalAlignment="Center" Width="112" Margin="8,0,0,0">
-                <TextBlock x:Name="textBlock_Copy" TextAlignment="Center" HorizontalAlignment="Center" Height="42" TextWrapping="Wrap" Text="PLAY" Opacity="0.3" VerticalAlignment="Center" FontSize="36" Width="112" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight"/>
+                <TextBlock x:Name="textBlock_Copy" TextAlignment="Center" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="PLAY" Opacity="0.3" VerticalAlignment="Center" FontSize="36" Width="112" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight" Margin="-1,0,0,0"/>
             </Border>
         </Border>
         <Border
             Name="PatchNotes_Small"
             HorizontalAlignment="Left"
-            Height="107"
-            Margin="116,275,0,0"
-            VerticalAlignment="Top"
+            Margin="116,0,0,118"
             Width="189"
             CornerRadius="8"
-            Opacity="0.65">
+            Opacity="0.65" Height="107" VerticalAlignment="Bottom">
             <Border.Background>
                 <ImageBrush ImageSource="/Assets/Patchnotes189x107Small.png"/>
             </Border.Background>
@@ -71,11 +69,9 @@ OffsetY="5"/>-->
         <Border
             Name="PatchNotes_Large_DropShadowHost"
             HorizontalAlignment="Left"
-            Height="132"
-            Margin="35,262,0,0"
-            VerticalAlignment="Top"
+            Margin="35,0,0,106"
             Width="234"
-            CornerRadius="8">
+            CornerRadius="8" Height="132" VerticalAlignment="Bottom">
             <!--<muxc:Shadow
         Color="Blue"
         OffsetX="30"
@@ -89,23 +85,281 @@ OffsetY="5"/>-->
             <Grid>
             </Grid>
         </Border>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="109" Margin="724,392,0,0" VerticalAlignment="Top" Width="280" Source="/Assets/Wide1000x380Logo.png" Stretch="UniformToFill"/>
+        <Image x:Name="image1" Margin="0,0,17,-1" Source="/Assets/Wide1000x380Logo.png" Stretch="UniformToFill" HorizontalAlignment="Right" Width="280" Height="109" VerticalAlignment="Bottom"/>
         <Ellipse HorizontalAlignment="Left" Height="32" Margin="40,18,0,0" Stroke="#32004c" VerticalAlignment="Top" Width="32" Fill="#32004c"/>
         <PersonPicture Name="ProfilePicture" HorizontalAlignment="Left" Height="26" Margin="43,21,0,0" VerticalAlignment="Top" Width="26"/>
         <Image x:Name="image2" HorizontalAlignment="Left" Height="28" Margin="86,21,0,0" VerticalAlignment="Top" Width="28" Source="/Assets/Square32x32.Dark.png"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="48" Margin="173,422,0,0" TextWrapping="Wrap" Opacity="0.87" Text="INSTALLING" VerticalAlignment="Top" FontSize="26" Width="88" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight"/>
-        <ProgressBar Value="83" HorizontalAlignment="Left" Height="10" Margin="173,456,0,0" VerticalAlignment="Top" Width="87" Foreground="#FF330042"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="19" Margin="274,425,0,0" TextWrapping="Wrap" Opacity="0.3" Text="83" VerticalAlignment="Top" FontSize="18" Width="21" FontFamily="Microsoft YaHei UI Light"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="26" Margin="280,427,0,0" TextWrapping="Wrap" Opacity="0.3" Text="_" VerticalAlignment="Top" FontSize="18" Width="8" FontFamily="Microsoft YaHei UI Light"/>
-        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="19" Margin="271,450,0,0" TextWrapping="Wrap" Opacity="0.3" Text="100" VerticalAlignment="Top" FontSize="18" Width="28" FontFamily="Microsoft YaHei UI Light"/>
-        <Border BorderBrush="Black" CornerRadius="8" BorderThickness="1" HorizontalAlignment="Left" Height="353" Margin="731,47,0,0" VerticalAlignment="Top" Width="273">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="173,0,0,30" TextWrapping="Wrap" Opacity="0.87" Text="INSTALLING" FontSize="26" Width="88" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight" Height="48" VerticalAlignment="Bottom"/>
+        <ProgressBar Value="83" HorizontalAlignment="Left" Margin="173,0,0,34" VerticalAlignment="Bottom" Width="87" Foreground="#FF330042" Height="10"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="274,0,0,56" TextWrapping="Wrap" Opacity="0.3" Text="83" FontSize="18" Width="21" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="280,0,0,47" TextWrapping="Wrap" Opacity="0.3" Text="_" FontSize="18" Width="8" FontFamily="Microsoft YaHei UI Light" Height="26" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="271,0,0,31" TextWrapping="Wrap" Opacity="0.3" Text="100" FontSize="18" Width="28" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
+        <Border BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>
-            <ScrollViewer x:Name="socialPanel" HorizontalAlignment="Center" Height="333" VerticalAlignment="Center" Width="253" IsScrollInertiaEnabled="True">
+            <ScrollViewer x:Name="socialPanel" HorizontalAlignment="Center" Height="333" VerticalAlignment="Top" Width="253" IsScrollInertiaEnabled="True" Margin="0,9,0,0">
                 <StackPanel Name="socialStackPanel">
+                    <TextBlock x:Name="socialPanelTitle" HorizontalAlignment="Left" Height="19" Margin="10,10,0,0" TextWrapping="Wrap" Text="FRIENDS" FontSize="18" Width="75" FontFamily="Microsoft YaHei UI Light"/>
+                    <Border x:Name="Profile" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Visible">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="ProfileAvatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="ProfileName" HorizontalAlignment="Left" Height="21" Margin="50,0,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Center" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <Border BorderBrush="#000000" Name="You_Badge_Border" Background="#000000" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="17" VerticalAlignment="Center" Width="36" Margin="185,0,0,0" Opacity="0.4">
+                                <TextBlock x:Name="You_Badge_text" TextAlignment="Center" HorizontalAlignment="Center" Height="15" TextWrapping="Wrap" Text="YOU" Opacity="1" VerticalAlignment="Center" FontSize="14" Width="36" FontFamily="/Lib/Fonts/#Dosis ExtraLight"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend1" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend1Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend1Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend1Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend1StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="Green" VerticalAlignment="Top" Width="10" Fill="Green"/>
+                            <Border Name="Friend1Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend1Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend2" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend2Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend2Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend2Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend2StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend2Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend2Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend3" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend3Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend3Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend3Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend3StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend3Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend3Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend4" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend4Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend4Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend4Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend4StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend4Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend4Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend5" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend5Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend5Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend5Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend5StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend5Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend5Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend6" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend6Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend6Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend6Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend6StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend6Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend6Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend7" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend7Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend7Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend7Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend7StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend7Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend7Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend8" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend8Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend8Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend8Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend8StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend8Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend8Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend9" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend9Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend9Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend9Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend9StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend9Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend9Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Friend10" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <PersonPicture x:Name="Friend10Avatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="Friend10Name" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="Friend10Status" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                            <Ellipse x:Name="Friend10StatusIcon" HorizontalAlignment="Left" Height="10" Margin="30,25,0,0" Stroke="#FF00A700" VerticalAlignment="Top" Width="10" Fill="#FF00A700"/>
+                            <Border Name="Friend10Remove_Border" BorderBrush="Black" Background="Black" BorderThickness="1" Margin="218,20,-3,-17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="45"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="Friend10Remove_Text" TextWrapping="Wrap" Text="X" FontSize="11" FontFamily="Microsoft Yi Baiti" RenderTransformOrigin="0.5,0.5" Margin="7,1,-7,-1" UseLayoutRounding="False" d:LayoutRounding="Auto" Opacity="0.7">
+                                    <TextBlock.RenderTransform>
+                                        <CompositeTransform Rotation="315"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="AddFriend_Border" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="50" Margin="10,12,0,0" Width="233" Visibility="Visible">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid>
+                            <Border BorderBrush="#4C000000" CornerRadius="4" BorderThickness="1" Margin="10,5,65,4">
+                                <TextBox x:Name="AddFriend_Input" TextWrapping="Wrap" Text="" FontSize="16" MaxLength="20" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" VerticalAlignment="Center" BorderBrush="#00ffffff" BorderThickness="0" PlaceholderText="Username/ID" Background="#00ffffff" SelectionHighlightColor="#FF4A4A4A" FontFamily="/Lib/Fonts/#Dosis ExtraLight" FocusVisualSecondaryBrush="#000000" Foreground="#b3ffffff" FocusVisualPrimaryBrush="#00ffffff" Height="38"/>
+                            </Border>
+                            <Border BorderBrush="#FF330042" Name="AddFriend_Confirm_Button" Background="#32004c" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="39" VerticalAlignment="Center" Width="55" Margin="171,0,0,0" Opacity="0.4" Tapped="AddFriend_Confirm_Button_Tapped">
+                                <TextBlock x:Name="AddFriend_Confirm_Text" TextAlignment="Center" HorizontalAlignment="Center" Height="22" TextWrapping="Wrap" Text="ADD" Opacity="1" VerticalAlignment="Center" FontSize="20" Width="55" FontFamily="/Lib/Fonts/#Dosis ExtraLight" Tapped="AddFriend_Confirm_Button_Tapped"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="IncomingFriendRequest" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="68" Margin="10,12,0,0" Width="233" Visibility="Collapsed">
+                        <Border.Background>
+                            <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+                        </Border.Background>
+                        <Grid Margin="0,0,0,0">
+                            <Border BorderBrush="#FF330042" Name="IncomingFriendRequest_Accept_Button" Background="#32004c" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="100" Margin="10,42,0,0" Opacity="0.8">
+                                <TextBlock x:Name="IncomingFriendRequest_Accept_Text" TextAlignment="Center" HorizontalAlignment="Center" Height="20" TextWrapping="Wrap" Text="ACCEPT" Opacity="1" VerticalAlignment="Center" FontSize="16" Width="100" FontFamily="/Lib/Fonts/#Dosis ExtraLight"/>
+                            </Border>
+                            <Border BorderBrush="#FF330042" Name="IncomingFriendRequest_Decline_Button" Background="#32004c" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="100" Margin="120,42,0,0" Opacity="0.8">
+                                <TextBlock x:Name="IncomingFriendRequest_Decline_Text" TextAlignment="Center" HorizontalAlignment="Center" Height="20" TextWrapping="Wrap" Text="DECLINE" Opacity="1" VerticalAlignment="Center" FontSize="16" Width="100" FontFamily="/Lib/Fonts/#Dosis ExtraLight"/>
+                            </Border>
+                            <PersonPicture x:Name="IncomingFriendRequestAvatar" HorizontalAlignment="Left" Height="32" Margin="8,3,0,0" VerticalAlignment="Top" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
+                            <TextBlock x:Name="IncomingFriendRequestName" HorizontalAlignment="Left" Height="21" Margin="50,4,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Top" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
+                            <TextBlock x:Name="IncomingFriendRequestStatus" HorizontalAlignment="Left" Height="21" Margin="50,20,0,0" TextWrapping="Wrap" Text="Wants to be friends." VerticalAlignment="Top" FontSize="14" Width="177" FontFamily="Microsoft YaHei Ui Light" Opacity="0.6" Foreground="White"/>
+                        </Grid>
+                    </Border>
                 </StackPanel>
             </ScrollViewer>
+        </Border>
+        <Border Name="socialPanelLoading_Border" Visibility="Visible" BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
+            <Border.Background>
+                <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
+            </Border.Background>
+            <Image x:Name="socialPanelLoading_Image" HorizontalAlignment="Left" Height="144" VerticalAlignment="Center" Width="144" Opacity="0.86" Source="/Assets/CloudSync.48x48@2x.png" Margin="56,0,0,0"/>
         </Border>
         <!--Background="#121212"-->
 

@@ -25,5 +25,7 @@ namespace AgsLauncherV4.AveryGameApi
             var response = await Main.WebClient.SendAsync(requestMessage);
             return JObject.Parse(await response.Content.ReadAsStringAsync()).GetValue("mtx").ToString();
         }
+
+        public static async Task<string> GetStatus(string userid) => JObject.Parse(await Main.WebClient.SendAsync(new HttpRequestMessage(HttpMethod.Get, $"account/status/{userid}")).Result.Content.ReadAsStringAsync()).GetValue("status").ToString();
     }
 }
