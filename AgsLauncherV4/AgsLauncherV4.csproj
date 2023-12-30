@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\CloudSync.48x48%402x.png" />
+    <Content Include="Assets\Launcher-Background-1080p60fps.mp4" />
     <Content Include="Assets\Patchnotes189x107Small.png" />
     <Content Include="Assets\Patchnotes223x126Large.png" />
     <Content Include="Assets\Square28x28.Light.png" />

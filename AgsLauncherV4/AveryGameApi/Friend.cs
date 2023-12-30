@@ -61,7 +61,7 @@ namespace AgsLauncherV4.AveryGameApi
         {
             var postRequest = new HttpRequestMessage(HttpMethod.Post, "friend/sendRequest");
             postRequest.Headers.Add("authKey", Main.AuthenticatedAccount.key);
-            postRequest.Content = new StringContent(JsonConvert.SerializeObject(new { otherUser }), Encoding.UTF8, "application/json");
+            postRequest.Content = new StringContent(JsonConvert.SerializeObject(new { Main.AuthenticatedAccount.userid, otherUser }), Encoding.UTF8, "application/json");
             return await Main.WebClient.SendAsync(postRequest).Result.Content.ReadAsStringAsync();
         }
 

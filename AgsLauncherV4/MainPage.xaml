@@ -8,10 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Width="1021"
-    Height="500">
+    Height="500"
+    Name="AveryGameLauncher4">
 
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Center" Height="500" VerticalAlignment="Center" Width="1020" Source="/Assets/Wide1563x553Background.png" Stretch="UniformToFill"/>
+        <MediaElement Name="LauncherBackgroundElement" AreTransportControlsEnabled="False" AutoPlay="True" IsLooping="True" Source="Assets/Launcher-Background-1080p60fps.mp4" Stretch="UniformToFill" Width="1021" Height="430" Volume="0" Opacity="0"/>
+        <!--<Image x:Name="image" HorizontalAlignment="Center" Height="500" VerticalAlignment="Center" Width="1020" Source="/Assets/Wide1563x553Background.png" Stretch="UniformToFill"/>-->
         <Border
     x:Name="PatchNotes_Small_OpacityBackground"
     HorizontalAlignment="Left"
@@ -25,7 +27,7 @@
         </Border>
         <Border Name="LaunchBorder" CornerRadius="8" BorderThickness="1" HorizontalAlignment="Left" Margin="40,0,0,25" Width="265" FocusVisualPrimaryBrush="{x:Null}" RequestedTheme="Dark" Height="60" VerticalAlignment="Bottom">
             <Border.Background>
-                <AcrylicBrush TintOpacity="0.5" Opacity="0.5" BackgroundSource="Backdrop" TintColor="Black"/>
+                <AcrylicBrush TintOpacity="0.5" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>
             <Border BorderBrush="#FF330042" Background="#32004c" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="48" VerticalAlignment="Center" Width="112" Margin="8,0,0,0">
                 <TextBlock x:Name="textBlock_Copy" TextAlignment="Center" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="PLAY" Opacity="0.3" VerticalAlignment="Center" FontSize="36" Width="112" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight" Margin="-1,0,0,0"/>
@@ -63,8 +65,6 @@ Color="Black"
 BlurRadius="10"
 OffsetX="5"
 OffsetY="5"/>-->
-            <Grid>
-            </Grid>
         </Border>
         <Border
             Name="PatchNotes_Large_DropShadowHost"
@@ -94,11 +94,11 @@ OffsetY="5"/>-->
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="274,0,0,56" TextWrapping="Wrap" Opacity="0.3" Text="83" FontSize="18" Width="21" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
         <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="280,0,0,47" TextWrapping="Wrap" Opacity="0.3" Text="_" FontSize="18" Width="8" FontFamily="Microsoft YaHei UI Light" Height="26" VerticalAlignment="Bottom"/>
         <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="271,0,0,31" TextWrapping="Wrap" Opacity="0.3" Text="100" FontSize="18" Width="28" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
-        <Border BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
+        <Border Name="socialPanel_Border" BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>
-            <ScrollViewer x:Name="socialPanel" HorizontalAlignment="Center" Height="333" VerticalAlignment="Top" Width="253" IsScrollInertiaEnabled="True" Margin="0,9,0,0">
+            <ScrollViewer x:Name="socialPanel" HorizontalAlignment="Center" Height="333" VerticalAlignment="Top" Width="253" IsScrollInertiaEnabled="True" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled"  Margin="0,9,0,0">
                 <StackPanel Name="socialStackPanel">
                     <TextBlock x:Name="socialPanelTitle" HorizontalAlignment="Left" Height="19" Margin="10,10,0,0" TextWrapping="Wrap" Text="FRIENDS" FontSize="18" Width="75" FontFamily="Microsoft YaHei UI Light"/>
                     <Border x:Name="Profile" BorderBrush="Black" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="40" Margin="10,12,0,0" Width="233" Visibility="Visible">
@@ -329,7 +329,13 @@ OffsetY="5"/>-->
                         </Border.Background>
                         <Grid>
                             <Border BorderBrush="#4C000000" CornerRadius="4" BorderThickness="1" Margin="10,5,65,4">
-                                <TextBox x:Name="AddFriend_Input" TextWrapping="Wrap" Text="" FontSize="16" MaxLength="20" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" VerticalAlignment="Center" BorderBrush="#00ffffff" BorderThickness="0" PlaceholderText="Username/ID" Background="#00ffffff" SelectionHighlightColor="#FF4A4A4A" FontFamily="/Lib/Fonts/#Dosis ExtraLight" FocusVisualSecondaryBrush="#000000" Foreground="#b3ffffff" FocusVisualPrimaryBrush="#00ffffff" Height="38"/>
+                                <TextBox x:Name="AddFriend_Input" TextWrapping="Wrap" Text="" FontSize="16" MaxLength="20" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" VerticalAlignment="Center" BorderBrush="#00ffffff" BorderThickness="0" PlaceholderText="Username/ID" Background="#00ffffff" SelectionHighlightColor="#FF4A4A4A" FontFamily="/Lib/Fonts/#Dosis ExtraLight" FocusVisualSecondaryBrush="#000000" Foreground="#b3ffffff" FocusVisualPrimaryBrush="#00ffffff" Height="38" TextChanged="AddFriend_Input_TextChanged"/>
+                            </Border>
+                            <Border BorderBrush="#4C000000" Opacity="0" CornerRadius="4" BorderThickness="1" Margin="0,-40,0,48" RenderTransformOrigin="0.5,0.5">
+                                <Border.RenderTransform>
+                                    <CompositeTransform ScaleY="-1"/>
+                                </Border.RenderTransform>
+                                <TextBox x:Name="sneaky" Opacity="0" TextWrapping="Wrap" Text="" FontSize="16" MaxLength="20" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" VerticalAlignment="Center" BorderBrush="#00ffffff" BorderThickness="0" PlaceholderText="Username/ID" Background="#00ffffff" SelectionHighlightColor="#FF4A4A4A" FontFamily="/Lib/Fonts/#Dosis ExtraLight" FocusVisualSecondaryBrush="#000000" Foreground="#b3ffffff" FocusVisualPrimaryBrush="#00ffffff" Height="38" TextChanged="AddFriend_Input_TextChanged"/>
                             </Border>
                             <Border BorderBrush="#FF330042" Name="AddFriend_Confirm_Button" Background="#32004c" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="39" VerticalAlignment="Center" Width="55" Margin="171,0,0,0" Opacity="0.4" Tapped="AddFriend_Confirm_Button_Tapped">
                                 <TextBlock x:Name="AddFriend_Confirm_Text" TextAlignment="Center" HorizontalAlignment="Center" Height="22" TextWrapping="Wrap" Text="ADD" Opacity="1" VerticalAlignment="Center" FontSize="20" Width="55" FontFamily="/Lib/Fonts/#Dosis ExtraLight" Tapped="AddFriend_Confirm_Button_Tapped"/>
@@ -355,7 +361,7 @@ OffsetY="5"/>-->
                 </StackPanel>
             </ScrollViewer>
         </Border>
-        <Border Name="socialPanelLoading_Border" Visibility="Visible" BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
+        <Border Name="socialPanelLoading_Border" Visibility="Collapsed" BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>

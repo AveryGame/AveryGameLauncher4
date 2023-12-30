@@ -1,6 +1,8 @@
 ﻿using AgsLauncherV4.AveryGameApi;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 
@@ -27,6 +30,7 @@ namespace AgsLauncherV4
         {
             this.InitializeComponent();
 
+            socialPanelLoading_Border.Visibility = Visibility.Visible;
             var size = new Size(1021, 500);
             ApplicationView.PreferredLaunchViewSize = size;
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
@@ -51,6 +55,7 @@ namespace AgsLauncherV4
             ProfileName.Text = Variables.LoggedInUser.username;
             await HandleIncomingFriendRequest();
             await LoadExistingFriends();
+            sneaky.Focus(FocusState.Programmatic);
             FadeOutThemeAnimation b = new FadeOutThemeAnimation();
             b.Duration = new Duration(TimeSpan.FromSeconds(0.3));
             Storyboard sb = new Storyboard();
@@ -60,6 +65,18 @@ namespace AgsLauncherV4
             sb.Begin();
             await Task.Delay(300);
             socialPanelLoading_Border.Visibility = Visibility.Collapsed;
+            sb.Stop();
+            sb.Children.Remove(b);
+            var b2 = new DoubleAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(0.3)),
+                From = 0,
+                To = 1
+            };
+            Storyboard.SetTarget(b2, LauncherBackgroundElement);
+            Storyboard.SetTargetProperty(b2, "Opacity");
+            sb.Children.Add(b2);
+            sb.Begin();
             //await AveryGameApi.Main.InitializeInstance("me", "1245Qwsa@");
         }
 
@@ -228,9 +245,76 @@ namespace AgsLauncherV4
             return;
         }
 
-        private void AddFriend_Confirm_Button_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        // Hacky fix but tapped is called twice for some reason. Thanks, Microsoft. Very cool.
+        private bool bIsShown = false;
+        private async void AddFriend_Confirm_Button_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            if (AddFriend_Input.Text == ProfileName.Text)
+            {
+                if (bIsShown) return;
+                bIsShown = true;
+                ContentDialog d = new ContentDialog()
+                {
+                    Title = "Nice try",
+                    Content = "F for effort.",
+                    CloseButtonText = "Aw man"
+                };
+                await d.ShowAsync();
+                bIsShown = false;
+                return;
+            }
+            // check if AddFriend_Input.Text is an int
+            if (bIsShown) return;
+            bool isNumeric = int.TryParse(AddFriend_Input.Text, out int userId);
+            if (!isNumeric) int.TryParse(Data.GetUserData(AddFriend_Input.Text).Result.id, out userId);
+            bIsShown = true;
+            var requestResult = await Friend.SendRequest(userId.ToString());
+            ContentDialog response = new ContentDialog()
+            {
+                Content = "Successfully sent friend request.",
+                CloseButtonText = "Ok"
+            };
+            await response.ShowAsync();
+            AddFriend_Input.Text = "";
+            bIsShown = false;
+            return;
+            // send friend request
+        }
 
+        private void AddFriend_Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //0.4
+            //0.85
+            if (AddFriend_Input.Text.Length > 0)
+            {
+                // animate the opacity of AddFriend_Confirm_Button to 0.85
+                var storyboard = new Storyboard();
+                var animation = new DoubleAnimation()
+                {
+                    From = AddFriend_Confirm_Button.Opacity,
+                    To = 0.85,
+                    Duration = new Duration(TimeSpan.FromSeconds(0.15))
+                };
+                Storyboard.SetTarget(animation, AddFriend_Confirm_Button);
+                Storyboard.SetTargetProperty(animation, "Opacity");
+                storyboard.Children.Add(animation);
+                storyboard.Begin();
+            }
+            if (AddFriend_Input.Text.Length == 0)
+            {
+                // animate the opacity of AddFriend_Confirm_Button to 0.4
+                var storyboard = new Storyboard();
+                var animation = new DoubleAnimation()
+                {
+                    From = AddFriend_Confirm_Button.Opacity,
+                    To = 0.4,
+                    Duration = new Duration(TimeSpan.FromSeconds(0.15))
+                };
+                Storyboard.SetTarget(animation, AddFriend_Confirm_Button);
+                Storyboard.SetTargetProperty(animation, "Opacity");
+                storyboard.Children.Add(animation);
+                storyboard.Begin();
+            }
         }
     }
 }
