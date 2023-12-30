@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgsLauncherV4", "AgsLauncherV4\AgsLauncherV4.csproj", "{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}.Debug|x64.ActiveCfg = Debug|x64
+		{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}.Debug|x64.Build.0 = Debug|x64
+		{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}.Debug|x64.Deploy.0 = Debug|x64
+		{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}.Release|x64.ActiveCfg = Release|x64
+		{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}.Release|x64.Build.0 = Release|x64
+		{7FDFF685-21A1-47C3-95F8-D8C6716AFB28}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C4E3734-8207-4EAC-9C70-E0033A8A073C}
+	EndGlobalSection
+EndGlobal
