@@ -29,7 +29,7 @@
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.5" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>
-            <Border BorderBrush="#FF330042" Background="#FF8102C3" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="48" VerticalAlignment="Center" Width="112" Margin="8,0,0,0">
+            <Border BorderBrush="#FF330042" Background="#FF8102C3" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="48" VerticalAlignment="Center" Width="112" Margin="8,0,0,0" Tapped="Launch_Button_Tapped">
                 <TextBlock x:Name="textBlock_Copy" TextAlignment="Center" HorizontalAlignment="Center" Height="28" TextWrapping="Wrap" Text="PLAY" Opacity="0.3" VerticalAlignment="Center" FontSize="36" Width="112" FontFamily="/Assets/YanoneKaffeesatz-VariableFont_wght.ttf#Yanone Kaffeesatz"/>
             </Border>
         </Border>

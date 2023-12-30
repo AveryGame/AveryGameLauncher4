@@ -14,5 +14,6 @@ namespace AgsLauncherV4
         internal static AveryGameApi.ResponseTypes.UserData LoggedInUser = null;
         internal static BitmapImage ProfilePicture = null;
         internal static List<string> FriendRequests = new List<string>();
+        internal static string authenticationKey = "";
     }
 }

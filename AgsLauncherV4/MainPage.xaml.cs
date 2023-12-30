@@ -10,12 +10,16 @@ using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Storage.Streams;
 using Windows.UI;
+using Windows.System;
+using System.IO;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Collections;
+using System.Collections.Generic;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -48,6 +52,7 @@ namespace AgsLauncherV4
         public async void TestTheStuff()
         {
             var result = await Main.InitializeInstance("AveryMadness", "Averyfd19");
+            Variables.authenticationKey = JObject.Parse(result).GetValue("key")?.ToString();
             Variables.LoggedInUser = Data.GetUserData(JObject.Parse(result).GetValue("userId")?.ToString()).Result;
             Variables.ProfilePicture = await DownloadImageFromUrl(Variables.LoggedInUser.profilePhoto);
             ProfilePicture.ProfilePicture = Variables.ProfilePicture;
@@ -245,10 +250,47 @@ namespace AgsLauncherV4
             return;
         }
 
+        private string DevBuildPath = "F:\\AveryGame\\WindowsNoEditor\\";
+        private async void Launch_Button_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Windows.Storage.StorageFolder folder = await Windows.Storage.StorageFolder.GetFolderFromPathAsync(DevBuildPath);
+            if (folder == null)
+            {
+                ContentDialog d = new ContentDialog()
+                {
+                    Title = "Build not Found",
+                    Content = "Build at path " + folder.Path + " was not found.",
+                    CloseButtonText = "Close"
+                };
+                await d.ShowAsync();
+                return;
+            }
+
+            Windows.Storage.StorageFile File = await Windows.Storage.StorageFile.GetFileFromPathAsync(folder.Path + "\\AveryGame\\Binaries\\Win64\\AveryGameLauncher.exe");
+            ContentDialog d2 = new ContentDialog()
+            {
+                Title = "asd",
+                Content = File.Path,
+                CloseButtonText = "text",
+            };
+            await d2.ShowAsync();
+            bool success = await Windows.System.Launcher.LaunchFileAsync(File);
+            ContentDialog d3 = new ContentDialog()
+            {
+                Title = "asd",
+                Content = success.ToString(),
+                CloseButtonText = "Close",
+            };
+            await d3.ShowAsync();
+                
+        }
+
         // Hacky fix but tapped is called twice for some reason. Thanks, Microsoft. Very cool.
         private bool bIsShown = false;
         private async void AddFriend_Confirm_Button_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(AddFriend_Input.Text))
+                return;
             if (AddFriend_Input.Text == ProfileName.Text)
             {
                 if (bIsShown) return;
