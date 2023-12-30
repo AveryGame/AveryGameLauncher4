@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="AgsLauncherV4.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -11,8 +11,8 @@
     Height="500"
     Name="AveryGameLauncher4">
 
-    <Grid>
-        <MediaElement Name="LauncherBackgroundElement" AreTransportControlsEnabled="False" AutoPlay="True" IsLooping="True" Source="Assets/Launcher-Background-1080p60fps.mp4" Stretch="UniformToFill" Width="1021" Height="430" Volume="0" Opacity="0"/>
+    <Grid Background="Black">
+        <MediaElement Name="LauncherBackgroundElement" AreTransportControlsEnabled="False" AutoPlay="True" IsLooping="True" Source="Assets/Launcher-Background-1080p60fps.mp4" Stretch="UniformToFill" Width="1021" Height="430" Volume="0" Opacity="0" Visibility="Visible"/>
         <!--<Image x:Name="image" HorizontalAlignment="Center" Height="500" VerticalAlignment="Center" Width="1020" Source="/Assets/Wide1563x553Background.png" Stretch="UniformToFill"/>-->
         <Border
     x:Name="PatchNotes_Small_OpacityBackground"
@@ -23,14 +23,14 @@
     Width="189"
     CornerRadius="8"
     Opacity="1" 
-            Background="Black">
+            Background="Gray">
         </Border>
         <Border Name="LaunchBorder" CornerRadius="8" BorderThickness="1" HorizontalAlignment="Left" Margin="40,0,0,25" Width="265" FocusVisualPrimaryBrush="{x:Null}" RequestedTheme="Dark" Height="60" VerticalAlignment="Bottom">
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.5" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
             </Border.Background>
-            <Border BorderBrush="#FF330042" Background="#32004c" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="48" VerticalAlignment="Center" Width="112" Margin="8,0,0,0">
-                <TextBlock x:Name="textBlock_Copy" TextAlignment="Center" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="PLAY" Opacity="0.3" VerticalAlignment="Center" FontSize="36" Width="112" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight" Margin="-1,0,0,0"/>
+            <Border BorderBrush="#FF330042" Background="#FF8102C3" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Left" Height="48" VerticalAlignment="Center" Width="112" Margin="8,0,0,0">
+                <TextBlock x:Name="textBlock_Copy" TextAlignment="Center" HorizontalAlignment="Center" Height="28" TextWrapping="Wrap" Text="PLAY" Opacity="0.3" VerticalAlignment="Center" FontSize="36" Width="112" FontFamily="/Assets/YanoneKaffeesatz-VariableFont_wght.ttf#Yanone Kaffeesatz"/>
             </Border>
         </Border>
         <Border
@@ -86,14 +86,14 @@ OffsetY="5"/>-->
             </Grid>
         </Border>
         <Image x:Name="image1" Margin="0,0,17,-1" Source="/Assets/Wide1000x380Logo.png" Stretch="UniformToFill" HorizontalAlignment="Right" Width="280" Height="109" VerticalAlignment="Bottom"/>
-        <Ellipse HorizontalAlignment="Left" Height="32" Margin="40,18,0,0" Stroke="#32004c" VerticalAlignment="Top" Width="32" Fill="#32004c"/>
+        <Ellipse HorizontalAlignment="Left" Height="32" Margin="40,18,0,0" Stroke="#32004c" VerticalAlignment="Top" Width="32" Fill="#FF7F00C1"/>
         <PersonPicture Name="ProfilePicture" HorizontalAlignment="Left" Height="26" Margin="43,21,0,0" VerticalAlignment="Top" Width="26"/>
         <Image x:Name="image2" HorizontalAlignment="Left" Height="28" Margin="86,21,0,0" VerticalAlignment="Top" Width="28" Source="/Assets/Square32x32.Dark.png"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="173,0,0,30" TextWrapping="Wrap" Opacity="0.87" Text="INSTALLING" FontSize="26" Width="88" FontFamily="/Lib/Fonts/#Yanone Kaffeesatz ExtraLight" Height="48" VerticalAlignment="Bottom"/>
-        <ProgressBar Value="83" HorizontalAlignment="Left" Margin="173,0,0,34" VerticalAlignment="Bottom" Width="87" Foreground="#FF330042" Height="10"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="274,0,0,56" TextWrapping="Wrap" Opacity="0.3" Text="83" FontSize="18" Width="21" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="280,0,0,47" TextWrapping="Wrap" Opacity="0.3" Text="_" FontSize="18" Width="8" FontFamily="Microsoft YaHei UI Light" Height="26" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="271,0,0,31" TextWrapping="Wrap" Opacity="0.3" Text="100" FontSize="18" Width="28" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="173,0,0,20" TextWrapping="Wrap" Opacity="0.87" Text="INSTALLING" FontSize="26" Width="142" FontFamily="Yanone Kaffeesatz" Height="48" VerticalAlignment="Bottom"/>
+        <ProgressBar Value="83" HorizontalAlignment="Left" Margin="173,0,0,34" VerticalAlignment="Bottom" Width="87" Foreground="#FF7F00C1" Height="10"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="272,0,0,56" TextWrapping="Wrap" Opacity="0.3" Text="83" FontSize="18" Width="21" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="278,0,0,52" TextWrapping="Wrap" Opacity="0.3" Text="_" FontSize="18" Width="8" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="267,0,0,32" TextWrapping="Wrap" Opacity="0.3" Text="100" FontSize="18" Width="32" FontFamily="Microsoft YaHei UI Light" Height="19" VerticalAlignment="Bottom"/>
         <Border Name="socialPanel_Border" BorderBrush="Black" CornerRadius="8" BorderThickness="1" Height="353" Margin="0,47,17,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="273">
             <Border.Background>
                 <AcrylicBrush TintOpacity="0.6" Opacity="1" BackgroundSource="Backdrop" TintColor="Black"/>
@@ -109,7 +109,7 @@ OffsetY="5"/>-->
                             <PersonPicture x:Name="ProfileAvatar" HorizontalAlignment="Left" Height="32" Margin="8,0,0,0" VerticalAlignment="Center" Width="35" ProfilePicture="/Assets/Square44x44Logo.scale-200.png"/>
                             <TextBlock x:Name="ProfileName" HorizontalAlignment="Left" Height="21" Margin="50,0,0,0" TextWrapping="Wrap" Text="AveryMadness" VerticalAlignment="Center" FontSize="16" Width="177" FontFamily="Microsoft YaHei Ui Light"/>
                             <Border BorderBrush="#000000" Name="You_Badge_Border" Background="#000000" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="17" VerticalAlignment="Center" Width="36" Margin="185,0,0,0" Opacity="0.4">
-                                <TextBlock x:Name="You_Badge_text" TextAlignment="Center" HorizontalAlignment="Center" Height="15" TextWrapping="Wrap" Text="YOU" Opacity="1" VerticalAlignment="Center" FontSize="14" Width="36" FontFamily="/Lib/Fonts/#Dosis ExtraLight"/>
+                                <TextBlock x:Name="You_Badge_text" TextAlignment="Center" HorizontalAlignment="Center" Height="19" TextWrapping="Wrap" Text="YOU" Opacity="1" VerticalAlignment="Center" FontSize="14" Width="36" FontFamily="/Lib/Fonts/Dosis-VariableFont_wght.ttf#Dosis"/>
                             </Border>
                         </Grid>
                     </Border>
@@ -337,8 +337,8 @@ OffsetY="5"/>-->
                                 </Border.RenderTransform>
                                 <TextBox x:Name="sneaky" Opacity="0" TextWrapping="Wrap" Text="" FontSize="16" MaxLength="20" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" VerticalAlignment="Center" BorderBrush="#00ffffff" BorderThickness="0" PlaceholderText="Username/ID" Background="#00ffffff" SelectionHighlightColor="#FF4A4A4A" FontFamily="/Lib/Fonts/#Dosis ExtraLight" FocusVisualSecondaryBrush="#000000" Foreground="#b3ffffff" FocusVisualPrimaryBrush="#00ffffff" Height="38" TextChanged="AddFriend_Input_TextChanged"/>
                             </Border>
-                            <Border BorderBrush="#FF330042" Name="AddFriend_Confirm_Button" Background="#32004c" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="39" VerticalAlignment="Center" Width="55" Margin="171,0,0,0" Opacity="0.4" Tapped="AddFriend_Confirm_Button_Tapped">
-                                <TextBlock x:Name="AddFriend_Confirm_Text" TextAlignment="Center" HorizontalAlignment="Center" Height="22" TextWrapping="Wrap" Text="ADD" Opacity="1" VerticalAlignment="Center" FontSize="20" Width="55" FontFamily="/Lib/Fonts/#Dosis ExtraLight" Tapped="AddFriend_Confirm_Button_Tapped"/>
+                            <Border BorderBrush="#FF330042" Name="AddFriend_Confirm_Button" Background="#FFA903FF" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Left" Height="39" VerticalAlignment="Center" Width="55" Margin="171,0,0,0" Opacity="0.4" Tapped="AddFriend_Confirm_Button_Tapped">
+                                <TextBlock x:Name="AddFriend_Confirm_Text" TextAlignment="Center" HorizontalAlignment="Center" Height="28" TextWrapping="Wrap" Text="ADD" Opacity="1" VerticalAlignment="Center" FontSize="20" Width="55" FontFamily="/Lib/Fonts/Dosis-VariableFont_wght.ttf#Dosis" Tapped="AddFriend_Confirm_Button_Tapped"/>
                             </Border>
                         </Grid>
                     </Border>
