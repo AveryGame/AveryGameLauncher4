@@ -51,8 +51,7 @@ namespace AgsLauncherV4
 
         public async void TestTheStuff()
         {
-            var result = await Main.InitializeInstance("AveryMadness", "Averyfd19");
-            Variables.authenticationKey = JObject.Parse(result).GetValue("key")?.ToString();
+            var result = await Main.InitializeInstance("me", "1245Qwsa@");
             Variables.LoggedInUser = Data.GetUserData(JObject.Parse(result).GetValue("userId")?.ToString()).Result;
             Variables.ProfilePicture = await DownloadImageFromUrl(Variables.LoggedInUser.profilePhoto);
             ProfilePicture.ProfilePicture = Variables.ProfilePicture;
@@ -264,7 +263,7 @@ namespace AgsLauncherV4
                 };
                 await d.ShowAsync();
                 return;
-            }
+        }
 
             Windows.Storage.StorageFile File = await Windows.Storage.StorageFile.GetFileFromPathAsync(folder.Path + "\\AveryGame\\Binaries\\Win64\\AveryGameLauncher.exe");
             ContentDialog d2 = new ContentDialog()
